@@ -33,7 +33,7 @@ int convert (char s, int mult) {
 void reduce(long int * x, long int * y) {
 	int neg = 1; //for negative
 	if (*x < 0){
-		neg = neg * -1; // *= and /= are not things
+		neg = neg * -1; 
 		*x = *x * -1;
 	}
 	if (*y < 0){
@@ -224,7 +224,7 @@ int parseLinearSystem(char * s, linearSystemType * ls, int system){
     return 1;
 }
 
-void ootpoot (linearSystemType * system, int i, FILE * file){
+void output (linearSystemType * system, int i, FILE * file){
     fprintf (file, "%i", system[i].F1.num);
     if (system[i].F1.den != 1) fprintf (file, "/%i", system[i].F1.den);
     fprintf (file, "%c %c %i", system[i].var1, system[i].o1, system[i].F2.num);
@@ -304,7 +304,7 @@ int main(){
             if (systemList[0]=='\n'){
                 computeY(&systems[j]);
                 systemType(&systems[j]);
-                ootpoot (systems, j, outFile);
+                output (systems, j, outFile);
                 j++;
             }
         }
@@ -320,11 +320,9 @@ int main(){
     fclose(outFile);
     sortFile = fopen("sortedSolvedLinearSystems.txt", "w");
     for(int m = 0; m<j; m++) {
-        ootpoot (systems, m, sortFile);
+        output (systems, m, sortFile);
     }
     printf ("The linear systems have been sorted and exported to sortedSolvedLinearSystems.txt.");
     fclose(getFile);
     fclose(sortFile);
 }
-testing2.c
-Displaying testing2.c.
