@@ -1,6 +1,8 @@
 # Linear-system-solver
 
-Using C, I created a program which parses a dataset of linear systems, solves them, properly reduces the fraction answers, and finally sorts all computed answers. These linear systems consist of two variables and two equations where all numbers included are fractions (negative numbers included). For example:
+Using C, I created a program which parses a dataset of linear systems, solves them, properly reduces the fraction answers, and finally sorts all computed answers. These linear systems consist of two variables and two equations where all numbers included are fractions (negative numbers included).
+
+For example:
 ax + by = e
 cx - dy = f 
 Where a, b, c, d, e, and f are all fractions in the form of n/d (numerators and denominators can be one or two digits)
